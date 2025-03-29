@@ -53,7 +53,7 @@ namespace Our.Umbraco.ValidationAttributes
             
             if (file != null)
             {
-                isValid = ValidFileTypes.Any(x => file.FileName.EndsWith(x));
+                isValid = ValidFileTypes.Any(x => file.FileName.ToLower().EndsWith(x));
             }
 
             return isValid;
