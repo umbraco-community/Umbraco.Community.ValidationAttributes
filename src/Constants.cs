@@ -1,8 +1,8 @@
-namespace Our.Umbraco.ValidationAttributes
+namespace Umbraco.Community.ValidationAttributes
 {
     internal class Constants
     {
-        public const string PluginName = "Our.Umbraco.ValidationAttributes";
+        public const string PluginName = "Umbraco.Community.ValidationAttributes";
 
         public class Configuration
         {

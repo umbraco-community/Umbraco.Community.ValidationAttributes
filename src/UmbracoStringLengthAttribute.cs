@@ -1,10 +1,10 @@
-using Our.Umbraco.ValidationAttributes.Helpers;
-using Our.Umbraco.ValidationAttributes.Interfaces;
-using Our.Umbraco.ValidationAttributes.Services;
+using Umbraco.Community.ValidationAttributes.Helpers;
+using Umbraco.Community.ValidationAttributes.Interfaces;
+using Umbraco.Community.ValidationAttributes.Services;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace Our.Umbraco.ValidationAttributes
+namespace Umbraco.Community.ValidationAttributes
 {
     /// <summary>
     /// Specifies the minimum and maximum length of charactors that are allowed in a data field. 

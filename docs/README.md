@@ -1,22 +1,33 @@
-# Our.Umbraco.ValidationAttributes
-Contains model validation attributes to for your properties, by using umbraco dictionary as the resource for error messages.
+# Umbraco.Community.ValidationAttributes
 
-This branch is exclusively for Umbraco 9.
-This project is a port for Umbraco 9, taken from the [original Our.Umbraco.DataAnnotations](http://github.com/rasmuseeg/Our.Umbraco.DataAnnotations) by [rasmuseeg](https://github.com/rasmuseeg).  
+Model validation attributes for your Umbraco properties, using Umbraco Dictionary as the resource for error messages.
 
-[Looking for Umbraco 8?](https://github.com/rasmuseeg/Our.Umbraco.DataAnnotations/tree/dev-v8)  
-[Looking for Umbraco 7?](https://github.com/rasmuseeg/Our.Umbraco.DataAnnotations/tree/dev-v7)
+**This version targets Umbraco 17+.**
+
+Looking for Umbraco 9-14? See the [previous version by ZioTino](https://github.com/ZioTino/Our.Umbraco.ValidationAttributes).
+
+## Credits
+
+This project was originally created by [ZioTino (Martino Gabrielli)](https://github.com/ZioTino) as [Our.Umbraco.ValidationAttributes](https://github.com/ZioTino/Our.Umbraco.ValidationAttributes), itself a port of [Our.Umbraco.DataAnnotations](http://github.com/rasmuseeg/Our.Umbraco.DataAnnotations) by [rasmuseeg](https://github.com/rasmuseeg). Thank you to ZioTino for creating and maintaining this package for the Umbraco community.
+
+### Contributors
+
+- [AaronSadlerUK](https://github.com/AaronSadlerUK)
+- [skttl](https://github.com/skttl)
+- [ZioTino](https://github.com/ZioTino)
+- [grafsnikers](https://github.com/grafsnikers)
+- [rasmuseeg](https://github.com/rasmuseeg)
 
 ## Installation
 ```
-dotnet add package Our.Umbraco.ValidationAttributes
+dotnet add package Umbraco.Community.ValidationAttributes
 ```
 Build the project and start website.
 
 ## Client Validation
 Include the following scripts in your layout.cshtml file, or in your master page:
 
-```
+```html
 <body>
     @RenderBody()
 
@@ -24,13 +35,13 @@ Include the following scripts in your layout.cshtml file, or in your master page
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js" integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js" referrerpolicy="no-referrer"></script>
 
-    <script src="~\App_Plugins\Our.Umbraco.ValidationAttributes\Scripts\jquery.validation.custom.js">
+    <script src="~/App_Plugins/Umbraco.Community.ValidationAttributes/Scripts/jquery.validation.custom.js">
 </body>
 ```
 
-The above is just a sample, you may use any method you like to include the scripts.  
-**NOTE: *jquery.validation.custom.js* is required to ensure that UmbracoIFormFileExtensions, UmbracoMaxFileSize and UmbracoMustBeTrue attributes are working correctly.**  
-**As an alternative you can include yourself its content with any method you like.**  
+The above is just a sample, you may use any method you like to include the scripts.
+**NOTE: *jquery.validation.custom.js* is required to ensure that UmbracoIFormFileExtensions, UmbracoMaxFileSize and UmbracoMustBeTrue attributes are working correctly.**
+**As an alternative you can include yourself its content with any method you like.**
 
 The end result for a page with validation could look like:
 ```cshtml
@@ -62,8 +73,6 @@ The end result for a page with validation could look like:
 }
 ```
 
-### 
-
 ## Attributes
 Decorate your properties with the following attributes
 
@@ -84,7 +93,7 @@ Decorate your properties with the following attributes
 **How to use:**
 ```C#
 [UmbracoRequired]
-public string MyProperty { get; set; } 
+public string MyProperty { get; set; }
 ```
 
 ### UmbracoCompare
@@ -132,25 +141,25 @@ Example:
 public string Email { get; set; }
 ```
 
-### UmbracoIFormFileExtensions  
-  
+### UmbracoIFormFileExtensions
+
 | Key | Default |
 | -- | -- |
-| FormFileExtensionsError | Must be created by yourself. |  
-  
-Example:   
+| FormFileExtensionsError | Must be created by yourself. |
+
+Example:
 ```C#
 [UmbracoIFormFileExtensions("jpeg,png,jpg")] // List of comma-separated file extensions
 public IFormFile UmbracoIFormFileExtensions { get; set; }
-```   
+```
 
-### UmbracoMaxFileSize  
-  
+### UmbracoMaxFileSize
+
 | Key | Default |
 | -- | -- |
-| MaxFileSizeError | Must be created by yourself. |  
+| MaxFileSizeError | Must be created by yourself. |
 
-Example:  
+Example:
 ```C#
 [UmbracoMaxFileSize(5 * 1024 * 1024)] // Max size in bytes
 public IFormFile UmbracoMaxFileSize { get; set; }
@@ -231,5 +240,5 @@ Each Attribute has a public property `DictionaryKey` which can be set like this:
 public string MyProperty { get; set; }
 ```
 
-Not setting a custom key, will fallback to the default dictionary key.  
+Not setting a custom key, will fallback to the default dictionary key.
 **You have to create Dictionary Keys manually, as explained in this documentation.**
