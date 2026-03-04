@@ -3,11 +3,11 @@ using System.ComponentModel.DataAnnotations;
 using Lucene.Net.Analysis.Hunspell;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
-using Our.Umbraco.ValidationAttributes.Helpers;
-using Our.Umbraco.ValidationAttributes.Interfaces;
-using Our.Umbraco.ValidationAttributes.Services;
+using Umbraco.Community.ValidationAttributes.Helpers;
+using Umbraco.Community.ValidationAttributes.Interfaces;
+using Umbraco.Community.ValidationAttributes.Services;
 
-namespace Our.Umbraco.ValidationAttributes
+namespace Umbraco.Community.ValidationAttributes
 {
     [AttributeUsage(AttributeTargets.Property, AllowMultiple = false, Inherited = false)]
     public sealed class UmbracoMaxFileSizeAttribute : ValidationAttribute, IClientModelValidator, IUmbracoValidationAttribute

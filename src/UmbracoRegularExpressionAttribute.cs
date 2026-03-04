@@ -1,10 +1,10 @@
-using Our.Umbraco.ValidationAttributes.Helpers;
-using Our.Umbraco.ValidationAttributes.Interfaces;
-using Our.Umbraco.ValidationAttributes.Services;
+using Umbraco.Community.ValidationAttributes.Helpers;
+using Umbraco.Community.ValidationAttributes.Interfaces;
+using Umbraco.Community.ValidationAttributes.Services;
 using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
-namespace Our.Umbraco.ValidationAttributes
+namespace Umbraco.Community.ValidationAttributes
 {
     /// <summary>
     /// Specifies that a data field value in ASP.net Dynamic Data must match the specified regular expression.
