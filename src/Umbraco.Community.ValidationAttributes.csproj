@@ -7,7 +7,7 @@
         <Title>Umbraco.Community.ValidationAttributes</Title>
         <Description>[Umbraco v17+] Contains validation attributes to decorate your classes, but using Umbraco Dictionary as the resource.</Description>
         <PackageTags>umbraco-marketplace umbraco plugin package</PackageTags>
-
+        <Version>17.0.0</Version>
         <Authors>Umbraco Community</Authors>
         <RootNamespace>Umbraco.Community.ValidationAttributes</RootNamespace>
         <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
