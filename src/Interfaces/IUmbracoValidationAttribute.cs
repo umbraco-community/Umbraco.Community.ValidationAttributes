@@ -1,4 +1,4 @@
-namespace Our.Umbraco.ValidationAttributes.Interfaces
+namespace Umbraco.Community.ValidationAttributes.Interfaces
 {
     public interface IUmbracoValidationAttribute
     {

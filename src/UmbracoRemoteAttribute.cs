@@ -1,12 +1,12 @@
-using Our.Umbraco.ValidationAttributes.Helpers;
-using Our.Umbraco.ValidationAttributes.Interfaces;
-using Our.Umbraco.ValidationAttributes.Services;
+using Umbraco.Community.ValidationAttributes.Helpers;
+using Umbraco.Community.ValidationAttributes.Interfaces;
+using Umbraco.Community.ValidationAttributes.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using Microsoft.Extensions.Configuration;
 using Umbraco.Cms.Web.Common;
 
-namespace Our.Umbraco.ValidationAttributes
+namespace Umbraco.Community.ValidationAttributes
 {
     /// <summary>
     /// A RemoteAttributeBase for controllers which configures Unobtrusive validation to send an Ajax request to the web site. The invoked action should return JSON indicating whether the value is valid.

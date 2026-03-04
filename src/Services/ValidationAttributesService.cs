@@ -2,7 +2,7 @@ using System;
 using Microsoft.Extensions.Configuration;
 using Umbraco.Cms.Web.Common;
 
-namespace Our.Umbraco.ValidationAttributes.Services
+namespace Umbraco.Community.ValidationAttributes.Services
 {
     public static class ValidationAttributesService
     {
@@ -25,7 +25,7 @@ namespace Our.Umbraco.ValidationAttributes.Services
         {
             string appSettingKey = $"Umbraco:{Constants.Configuration.Prefix}:";
             if (key != Constants.Configuration.EmailInputType && key != Constants.Configuration.RangeInputType)
-                throw new FormatException($"The key {key} is not a valid configuration constant for Our.Umbraco.ValidationAttributes");
+                throw new FormatException($"The key {key} is not a valid configuration constant for Umbraco.Community.ValidationAttributes");
 
             if (key == Constants.Configuration.EmailInputType)
                 appSettingKey += Constants.Configuration.EmailInputType;
@@ -58,10 +58,10 @@ namespace Our.Umbraco.ValidationAttributes.Services
         internal static string DictionaryValue(string dictionaryKey)
         {
             if (_umbracoHelperAccessor is null)
-                throw new NullReferenceException("Our.Umbraco.ValidationAttributes: cannot access IUmbracoHelperAccessor. Please make sure everything is configured properly.");
+                throw new NullReferenceException("Umbraco.Community.ValidationAttributes: cannot access IUmbracoHelperAccessor. Please make sure everything is configured properly.");
 
             if (!_umbracoHelperAccessor.TryGetUmbracoHelper(out _umbracoHelper))
-                throw new NullReferenceException("Our.Umbraco.ValidationAttributes: cannot access UmbracoHelper instance.");
+                throw new NullReferenceException("Umbraco.Community.ValidationAttributes: cannot access UmbracoHelper instance.");
 
             string key = _umbracoHelper.GetDictionaryValue(dictionaryKey);
             if (!string.IsNullOrEmpty(key))

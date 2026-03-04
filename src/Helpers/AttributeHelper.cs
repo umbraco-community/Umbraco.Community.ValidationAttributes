@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Our.Umbraco.ValidationAttributes.Helpers
+namespace Umbraco.Community.ValidationAttributes.Helpers
 {
     public static class AttributeHelper
     {

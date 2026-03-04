@@ -1,11 +1,11 @@
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
-using Our.Umbraco.ValidationAttributes.Services;
+using Umbraco.Community.ValidationAttributes.Services;
 using Umbraco.Cms.Core.Composing;
 using Umbraco.Cms.Web.Common;
 
-namespace Our.Umbraco.ValidationAttributes.Components
+namespace Umbraco.Community.ValidationAttributes.Components
 {
     public class ValidationAttributesComposer : ComponentComposer<ValidationAttributesComponent> { }
 

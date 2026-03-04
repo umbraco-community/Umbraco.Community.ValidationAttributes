@@ -1,8 +1,8 @@
-using Our.Umbraco.ValidationAttributes.Interfaces;
-using Our.Umbraco.ValidationAttributes.Services;
+using Umbraco.Community.ValidationAttributes.Interfaces;
+using Umbraco.Community.ValidationAttributes.Services;
 using System.ComponentModel;
 
-namespace Our.Umbraco.ValidationAttributes
+namespace Umbraco.Community.ValidationAttributes
 {
     public sealed class UmbracoDisplayNameAttribute : DisplayNameAttribute, IUmbracoValidationAttribute
     {
