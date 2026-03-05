@@ -1,0 +1,24 @@
+workflow: GitHubFlow/v1
+next-version: 17.0.0
+branches:
+  main:
+    regex: ^main$
+    label: ''
+    increment: Patch
+    is-release-branch: true
+  develop:
+    regex: ^develop$
+    label: beta
+    increment: Minor
+  feature:
+    regex: ^feature[/-]
+    label: alpha.{BranchName}
+    increment: Inherit
+  pull-request:
+    regex: ^(pull|pull\-requests|pr)[/-]
+    label: PullRequest
+    increment: Inherit
+  hotfix:
+    regex: ^hotfix[/-]
+    label: beta
+    increment: Patch
