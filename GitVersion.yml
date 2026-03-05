@@ -1,4 +1,4 @@
-workflow: GitHubFlow/v1
+mode: ContinuousDelivery
 next-version: 17.0.0
 branches:
   main:
@@ -6,10 +6,12 @@ branches:
     label: ''
     increment: Patch
     is-release-branch: true
+    mode: ContinuousDelivery
   develop:
     regex: ^develop$
     label: beta
     increment: Minor
+    mode: ContinuousDeployment
   feature:
     regex: ^feature[/-]
     label: alpha.{BranchName}
